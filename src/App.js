@@ -1,40 +1,21 @@
 function App() {
   return (
-    <div className='bg-gray-700 text-white min-h-screen flex items-center justify-center'>
-      <div className='max-w-lg'>
-        <div className='flex hover:bg-gray-800 hover:bg-opacity-30 px-4 py-1'>
-          <img
-            className='h-10 w-10 rounded-full mr-4'
-            src='assets/picture.jpg'
-            alt=''
-          />
-          <div>
-            <p className='flex items-baseline'>
-              <span className='text-green-500 mr-2 text-sm font-medium'>
-                matthewbevis
-              </span>
-              <span className='text-xs'>01/01/2021</span>
-            </p>
-            <p className='text-gray-300'>
-              You should never use something like leading relaxed with a big
-              font size, it goes against all typography best practices. Line
-              height should decrease as font size gets bigger
-            </p>
-          </div>
+    <div className='flex h-screen text-white'>
+      <div className='bg-gray-800 p-4'>
+        <div
+          className='bg-white text-gray-800 rounded-full w-12 h-12 flex 
+        items-center justify-center'
+        >
+          TW
         </div>
-        <div className='mt-1 hover:bg-gray-800 hover:bg-opacity-30 px-4 py-1'>
-          <p className='text-gray-300 pl-14'>
-            You can override it in your config if you want but ultimately we
-            chose the defaults they did because they let you get results closest
-            to what a professional designer would do more easily
-          </p>
-        </div>
-        <div className='mt-1 hover:bg-gray-800  hover:bg-opacity-30 px-4 py-1'>
-          <p className='text-gray-300 pl-14'>
-            Since we changed this in tailwind 2 I’ve almost never used a leading
-            class at all
-          </p>
-        </div>
+      </div>
+      <div className='bg-gray-700 flex flex-col w-60'>
+        <div className='p-4 shadow-md'>Tailwind CSS</div>
+        <div className='p-4 flex-1'>List</div>
+      </div>
+      <div className='bg-gray-600 flex-1'>
+        <div className='p-4 shadow-md'>General</div>
+        <div className='p-4 flex-1'>Messages</div>
       </div>
     </div>
   );
