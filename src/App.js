@@ -18,7 +18,7 @@ function App() {
         ))}
       </div>
       <div className='bg-gray-800 flex flex-col w-60'>
-        <div className='px-3 h-12 flex items-center shadow-md'>
+        <div className='px-3 h-12 flex items-center shadow-md font-title'>
           Tailwind CSS
         </div>
         <div className='text-gray-300 p-3 flex-1 space-y-2 overflow-y-scroll'>
@@ -33,12 +33,12 @@ function App() {
         <div className='p-3 flex-1 space-y-4 overflow-y-scroll'>
           {[...Array(40)].map((_, index) => (
             <p>
-              Message {index} :Bacon ipsum dolor amet kielbasa ground round
-              bacon, cow jowl andouille filet mignon pork belly tri-tip doner
-              burgdoggen shank turkey. Meatball doner burgdoggen pastrami tail
-              shank andouille ham brisket alcatra pork loin prosciutto
-              tenderloin meatloaf boudin. Drumstick venison filet mignon boudin
-              beef biltong.
+              A {index} :Bacon ipsum dolor amet kielbasa ground round bacon, cow
+              jowl andouille filet mignon pork belly tri-tip doner burgdoggen
+              shank turkey. Meatball doner burgdoggen pastrami tail shank
+              andouille ham brisket alcatra pork loin prosciutto tenderloin
+              meatloaf boudin. Drumstick venison filet mignon boudin beef
+              biltong.
             </p>
           ))}
         </div>
