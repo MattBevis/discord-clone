@@ -1,50 +1,33 @@
+import { Route, Routes } from 'react-router-dom';
+import { NavLink, ServerLayout } from './components';
+import Image1 from './assets/images/servers/mirage.png';
+import Image2 from './assets/images/servers/next.png';
+import Image3 from './assets/images/servers/tailwind.png';
+
 function App() {
+  const servers = [
+    { id: 1, img: Image1 },
+    { id: 2, img: Image2 },
+    { id: 3, img: Image3 },
+  ];
+
   return (
     <div className='flex h-screen text-gray-100'>
       <div className='bg-gray-900 p-3 space-y-2 overflow-y-scroll'>
-        {/* {[...Array(40)].map((_, index) => (
-          <div
-            className='bg-white text-gray-800 rounded-full w-12 h-12 flex 
-        items-center justify-center'
-          >
-            {index}
-          </div>
-        ))} */}
-
-        <div
-          className='bg-gray-700 text-gray-100 rounded-3xl hover:rounded-2xl w-12 h-12 flex 
-        items-center justify-center transition-all hover:bg-brand hover:text-white
-        duration-200'
-        >
+        <NavLink href='/'>
           <DiscordIcon className='h-7 w-5' />
-        </div>
+        </NavLink>
+        <hr className='border-t-white/[.06] border-t-2 rounded mx-2' />
+        {servers.map((server) => (
+          <NavLink href={`/servers/${server.id}`} key={server.id}>
+            <img src={server.img} alt='server' />
+          </NavLink>
+        ))}
       </div>
-      <div className='bg-gray-800 flex flex-col w-60'>
-        <div className='px-3 h-12 flex items-center shadow-md font-title text-white'>
-          Tailwind CSS
-        </div>
-        <div className='text-gray-300 p-3 flex-1 space-y-2 overflow-y-scroll font-medium'>
-          <p className='text-white'>channel (unread)</p>
-          {[...Array(40)].map((_, index) => (
-            <p>channel {index}</p>
-          ))}
-        </div>
-      </div>
-      <div className='bg-gray-700 flex flex-1 flex-col'>
-        <div className='px-3 h-12 flex items-center shadow-md'>General</div>
-        <div className='p-3 flex-1 space-y-4 overflow-y-scroll'>
-          {[...Array(40)].map((_, index) => (
-            <p>
-              A {index} :Bacon ipsum dolor amet kielbasa ground round bacon, cow
-              jowl andouille filet mignon pork belly tri-tip doner burgdoggen
-              shank turkey. Meatball doner burgdoggen pastrami tail shank
-              andouille ham brisket alcatra pork loin prosciutto tenderloin
-              meatloaf boudin. Drumstick venison filet mignon boudin beef
-              biltong.
-            </p>
-          ))}
-        </div>
-      </div>
+      <Routes>
+        <Route path='/' element={<ServerLayout name={'Dashboard'} />} />
+        <Route path='/servers/:id' element={<ServerLayout />} />
+      </Routes>
     </div>
   );
 }
