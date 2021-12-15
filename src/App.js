@@ -15,7 +15,7 @@ function App() {
     <div className='flex h-screen text-gray-100'>
       <div className='bg-gray-900 p-3 space-y-2 overflow-y-scroll'>
         <NavLink href='/'>
-          <DiscordIcon className='h-7 w-5' />
+          <DiscordIcon className='h-5 w-7' />
         </NavLink>
         <hr className='border-t-white/[.06] border-t-2 rounded mx-2' />
         {servers.map((server) => (
